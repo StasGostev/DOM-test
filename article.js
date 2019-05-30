@@ -9,7 +9,7 @@ class Article {
     }
 
     matches(query) {
-        let str = `${this.title}+${this.author}+${this.text}`;
-        return !!str.match(query);
+        let str = `${this.title}+${this.author}+${this.text}`.toLowerCase();
+        return !!str.match(query.toLowerCase());
     }
 }
